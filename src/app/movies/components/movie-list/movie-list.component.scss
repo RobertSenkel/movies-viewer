@@ -1,0 +1,45 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 20px;
+}
+
+.movie-card {
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(50, 50, 100, 0.2);
+  }
+
+  mat-card-title, mat-card-subtitle {
+    .release {
+      font-size: 15px;
+    }
+    padding: 10px;
+  }
+}
+
+.no-poster {
+  width: 100%;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eeeeee;
+  color: #888888;
+  font-size: 1.1rem;
+  font-style: italic;
+}
